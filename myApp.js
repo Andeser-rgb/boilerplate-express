@@ -22,7 +22,7 @@ app.get('/new', (req, res, next) => {
     req.time = new Date().toString();
     next();
 }, (req, res) => {
-    return {time: req.time};
+    return res.json({time: req.time});
 })
 
 
