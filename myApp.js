@@ -1,4 +1,4 @@
-let bodyParser = requite('body-parser');
+let bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
 
