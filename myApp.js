@@ -18,6 +18,13 @@ app.get("/json", (req, res) => {
     return res.json({message: "Hello json"})
 });
 
+app.get('/new', (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+}, (req, res) => {
+    return {time: req.time};
+})
+
 
 
 
