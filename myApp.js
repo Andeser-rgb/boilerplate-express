@@ -19,7 +19,7 @@ app.get("/json", (req, res) => {
 });
 
 app.get('/now', (req, res, next) => {
-    req.time = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });;
+    req.time = new Date().toString();;
     next();
 }, (req, res) => {
     res.send({time: req.time});
